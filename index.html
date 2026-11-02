@@ -1,20 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <input type="text" placeholder="Enter your city" id="txtcity">
-    <input type="button" value="Search City" onclick="btnSearchCityOnAction()">
-    <div id="weatherInfo">
-        
-        
+    <div class="container">
+
+        <h1>Weather App</h1>
+
+        <div class="search">
+            <input id="city" type="text" placeholder="Enter city name">
+            <button id="btn">Search</button>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="weather">
+            <img src="" class="weather-icon" alt="Weather">
+
+            <h1 class="temp">--°C</h1>
+            <h2 class="city">Colombo</h2>
+            <p class="description">Weather condition</p>
+
+            <div class="details">
+
+                <div class="col">
+                    <div>
+                        <p class="humidity">--%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div>
+                        <p class="wind">-- km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <script src="js/app.js"></script>
-
 </body>
 </html>
