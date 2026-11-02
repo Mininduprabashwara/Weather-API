@@ -52,8 +52,7 @@ function getLocation() {
                 message.innerHTML =
                     "Please allow location access to get local weather.";
             } else {
-                message.innerHTML =
-                    "Location unavailable. Please try again.";
+                message.innerHTML ="Location unavailable. Please try again.";
             }
         },
         {
@@ -64,7 +63,7 @@ function getLocation() {
     );
 }
 
-// Search weather by city name
+
 async function checkWeather(city) {
     if (city.trim() === "") {
         message.innerHTML = "Please enter a city name.";
