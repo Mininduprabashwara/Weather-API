@@ -14,16 +14,12 @@ async function getLiveWeather(lat, lon) {
         const response = await fetch(
             `${URL}&lat=${lat}&lon=${lon}&appid=${APIKEY}`
         );
-
         const data = await response.json();
-
         if (!response.ok) {
             throw new Error("Unable to get weather");
         }
-
         displayWeather(data);
         message.innerHTML = "Live location weather updated";
-
     } catch (error) {
         message.innerHTML = "Weather data could not be loaded.";
     }
@@ -135,5 +131,4 @@ searchBox.addEventListener("keyup", function (event) {
     }
 });
 
-// Automatically get live location when page opens
 getLocation();
